@@ -14,24 +14,25 @@ pip install scikit-learn
  
 models:
 
- '''bash
+ ```bash
  openface_nn4.small2.v1.t7
  
- '''
+ ```
  
   A torch moidel you will need for producing 128-D embeddings
 You will also need another caffe model for performing the facial recginiton
 
-'''bash
+```bash
 res10_300x300_ssd_iter_140000.caffemodel
 
-'''
+```
+
 and
 
-'''bash
+```bash
 deploy.prototxt
 
-'''
+```
 
 Pickle is also used to store facial embeddings generated from applying torch models on images
 
