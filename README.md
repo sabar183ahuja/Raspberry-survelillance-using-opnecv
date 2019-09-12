@@ -17,7 +17,8 @@ models:
  '''bash
  openface_nn4.small2.v1.t7
  
- ''''
+ '''
+ 
   A torch moidel you will need for producing 128-D embeddings
 You will also need another caffe model for performing the facial recginiton
 
@@ -28,7 +29,7 @@ res10_300x300_ssd_iter_140000.caffemodel
 and
 
 '''bash
-deploy.prototxt"
+deploy.prototxt
 
 '''
 
@@ -38,6 +39,7 @@ Pickle is also used to store facial embeddings generated from applying torch mod
 
 STEP#1 Extract embeddings from face dataset
 give path to different data sets and files locations
+
 '''bash
 python extract_embeddings.py --dataset images --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
 
