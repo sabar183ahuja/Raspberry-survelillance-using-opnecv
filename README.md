@@ -41,24 +41,24 @@ Pickle is also used to store facial embeddings generated from applying torch mod
 STEP#1 Extract embeddings from face dataset
 give path to different data sets and files locations
 
-'''bash
+```bash
 python extract_embeddings.py --dataset images --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
 
-'''
+```
 
 STEP#2 Train face recognition model
 
-'''bash
+```bash
 python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle
 
-'''
+```
 
 STEP#3 Run surveillance 
 
-'''bash
+```bash
 python raspberrypi_surveillance.py
 
-'''
+```
  
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
